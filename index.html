@@ -4,742 +4,350 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vignesh Vijjapu | Software Engineer & ServiceNow Developer Portfolio</title>
+    <title>Vignesh Vijjapu | Software Engineer Portfolio</title>
 
-    <!-- Meta Tags for SEO -->
     <meta name="description"
-        content="Professional portfolio of Vignesh Vijjapu, Software Engineer Fresher and certified ServiceNow Developer (CSA, CAD). Explore full-stack projects, cloud DevOps experience, and interactive developer console.">
+        content="Portfolio of Vignesh Vijjapu, a Software Engineer fresher focused on ServiceNow, full-stack development, and practical product delivery.">
     <meta name="keywords"
-        content="Vignesh Vijjapu, Software Engineer, ServiceNow Developer, ServiceNow CSA, ServiceNow CAD, Full-Stack, Java, Python, Web Developer Portfolio, Cyberpunk Portfolio">
+        content="Vignesh Vijjapu, Software Engineer, ServiceNow Developer, Full Stack Developer, Java, Python, Portfolio">
     <meta name="author" content="Vignesh Vijjapu">
-    <meta name="robots" content="index, follow">
 
-    <!-- Open Graph / Social Sharing -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Vignesh Vijjapu | Developer Command Center">
-    <meta property="og:description"
-        content="Explore my projects, core skills, and experience through a highly interactive, futuristic terminal-powered portfolio.">
-    <meta property="og:image" content="https://vigneshvijjapu.dev/og-preview.png">
-    <meta property="og:url" content="https://vigneshvijjapu.dev">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Vignesh Vijjapu | Developer Command Center">
-    <meta name="twitter:description"
-        content="Futuristic and interactive terminal portfolio showing ServiceNow and full-stack software development experience.">
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@400;600;800;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
         rel="stylesheet">
 
-    <!-- CSS Link -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="theme-cyan">
-    <!-- Background Canvas for Interactive Particle Engine -->
-    <canvas id="particle-canvas"></canvas>
-
-    <!-- Scanline overlays for retro-futuristic CRT monitor look -->
-    <div class="scanlines"></div>
-    <div class="screen-glow"></div>
-
-    <!-- PRELOADER / BOOT HUD -->
-    <div id="preloader">
-        <div class="preloader-content">
-            <div class="preloader-logo">
-                <span class="logo-bracket">[</span>
-                <span class="logo-text">VIGNESH.V</span>
-                <span class="logo-bracket">]</span>
+<body class="theme-slate">
+    <div id="preloader" aria-hidden="true">
+        <div class="preloader-card">
+            <span class="preloader-kicker">Loading portfolio</span>
+            <div class="preloader-title">Vignesh Vijjapu</div>
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
             </div>
-            <div class="loader-bar-container">
-                <div class="loader-bar"></div>
-            </div>
-            <div class="loader-console" id="loader-console">
-                <p class="console-line">> INITIALIZING QUANTUM INTERFACE...</p>
-                <p class="console-line">> ESTABLISHING SECURE CONNECTION...</p>
-                <p class="console-line">> SYNCING RESUME DIAGNOSTICS...</p>
-            </div>
+            <p class="preloader-copy">Preparing a cleaner, calmer presentation.</p>
         </div>
     </div>
 
-    <!-- MAIN INTERFACE -->
-    <div class="app-container">
+    <header class="site-header">
+        <div class="nav-pill">
+            <a class="brand" href="#top" aria-label="Go to top">
+                <span class="brand-text">Vignesh.</span>
+            </a>
 
-        <!-- HEADER / COMMAND NAVIGATION -->
-        <header class="hud-header">
-            <div class="header-left">
-                <a href="#" class="hud-logo" id="logo-button">
-                    <span class="logo-bracket">&lt;</span>
-                    <span class="logo-glow">VIGNESH</span>
-                    <span class="logo-bracket">/&gt;</span>
-                </a>
-                <div class="system-status-indicator">
-                    <span class="status-dot pulsing"></span>
-                    <span class="status-text">STATUS: ACTIVE</span>
-                </div>
-            </div>
-
-            <nav class="hud-nav">
-                <a href="#about" class="nav-link" id="nav-about-btn"><span class="nav-num">01.</span>CORE</a>
-                <a href="#terminal-section" class="nav-link" id="nav-terminal-btn"><span
-                        class="nav-num">02.</span>CLI</a>
-                <a href="#skills" class="nav-link" id="nav-skills-btn"><span class="nav-num">03.</span>MATRIX</a>
-                <a href="#projects" class="nav-link" id="nav-projects-btn"><span class="nav-num">04.</span>GRID</a>
-                <a href="#experience" class="nav-link" id="nav-exp-btn"><span class="nav-num">05.</span>TIMELINE</a>
-                <a href="#contact" class="nav-link" id="nav-contact-btn"><span class="nav-num">06.</span>COMM</a>
+            <nav class="site-nav" aria-label="Primary navigation">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <!-- <a href="#terminal-section" class="nav-link">Writing</a> -->
+                <a href="#contact" class="nav-link">Contact</a>
             </nav>
 
-            <div class="header-right">
-                <!-- Theme Control Switcher -->
-                <div class="hud-controls">
-                    <button class="hud-btn theme-toggle" id="theme-btn" title="Cycle System Colors"
-                        aria-label="Cycle System Colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path
-                                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
-                        </svg>
-                    </button>
-                    <button class="hud-btn audio-toggle muted" id="audio-btn" title="Toggle Haptic Sound"
-                        aria-label="Toggle Haptic Sound">
-                        <svg class="audio-on-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
-                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" />
-                        </svg>
-                        <svg class="audio-off-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
-                            <line x1="23" y1="9" x2="17" y2="15" />
-                            <line x1="17" y1="9" x2="23" y2="15" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="system-time" id="system-time">00:00:00 PST</div>
+            <div class="header-meta">
+                <button class="icon-button theme-toggle" id="theme-toggle" type="button" aria-label="Change theme">
+                    Theme
+                </button>
+                <div class="clock" id="system-time">--:--</div>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <!-- MAIN LAYOUT -->
-        <main class="main-content">
+    <main id="top" class="page-shell">
+        <section id="about" class="section section-hero">
+            <div class="hero-stage reveal">
+                <span class="hero-pill"><span class="hero-dot"></span>Open to Opportunities</span>
+                <h1 style="color: #15141456;">I'm <span class="accent-word">Vignesh</span>, Software Engineer.</h1>
+                <p class="hero-copy hero-copy-center">
+                    A computer science graduate focused on ServiceNow, full stack development, and practical product
+                    delivery.
+                </p>
+            </div>
 
-            <!-- SECTION 1: HERO / CORE DIAGNOSTICS -->
-            <section id="about" class="hud-section about-section">
-                <div class="grid-layout">
-                    <!-- Column 1: Core Profile Info -->
-                    <div class="hud-panel profile-panel" id="about-card">
-                        <div class="panel-header">
-                            <span class="panel-tag">// PROFILE.DAT</span>
-                            <h2>VIGNESH VIJJAPU</h2>
-                            <span class="panel-sub">SYSTEM IDENT: 6300-194-981</span>
-                        </div>
-                        <div class="panel-body">
-                            <div class="profile-header-flex">
-                                <div class="profile-photo-container">
-                                    <!-- <div class="photo-scanner"></div> -->
-                                    <img src="profile.jpg" alt="Vignesh Vijjapu" class="profile-photo">
-                                    <div class="photo-corner top-left"></div>
-                                    <div class="photo-corner top-right"></div>
-                                    <div class="photo-corner bottom-left"></div>
-                                    <div class="photo-corner bottom-right"></div>
-                                </div>
-                                <div class="profile-main-details">
-                                    <div class="profile-title-container">
-                                        <h3 class="role-title glitched" data-text="SOFTWARE ENGINEER">SOFTWARE ENGINEER
-                                        </h3>
-                                        <p class="sub-role-title">ServiceNow Specialist & Full-Stack Developer</p>
-                                    </div>
-                                    <p class="profile-summary">
-                                        Results-driven and adaptable Software Engineer fresher with a strong foundation
-                                        in full-stack development, REST APIs, and OOP principles. Hands-on experience
-                                        with ServiceNow ITSM, application development, and SDLC practices through
-                                        academic projects and internships. Proficient in Java, Python, and web
-                                        technologies, with a passion for building scalable solutions. Eager to
-                                        contribute to Agile teams and deliver impactful software products.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="profile-stats-grid">
-                                <div class="stat-box">
-                                    <span class="stat-label">LOCATION</span>
-                                    <span class="stat-value">India</span>
-                                </div>
-                                <div class="stat-box">
-                                    <span class="stat-label">EXP LEVEL</span>
-                                    <span class="stat-value">Fresher / Intern</span>
-                                </div>
-                                <div class="stat-box">
-                                    <span class="stat-label">STATUS</span>
-                                    <span class="stat-value text-glowing">Available</span>
-                                </div>
-                            </div>
-
-                            <div class="social-links-grid">
-                                <a href="https://www.linkedin.com/in/vignesh-vijjapu-b141392b5/" target="_blank"
-                                    class="social-link-btn" id="linkedin-link">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path
-                                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                                        <rect x="2" y="9" width="4" height="12" />
-                                        <circle cx="4" cy="4" r="2" />
-                                    </svg>
-                                    <span>LINKEDIN</span>
-                                </a>
-                                <a href="https://github.com/vignesh059" target="_blank" class="social-link-btn"
-                                    id="github-link">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path
-                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                                    </svg>
-                                    <span>GITHUB</span>
-                                </a>
-                                <a href="https://leetcode.com/u/Vignesh_Vijjapu" target="_blank" class="social-link-btn"
-                                    id="leetcode-link">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10" />
-                                        <path d="M8 12h8m-4-4v8" />
-                                    </svg>
-                                    <span>LEETCODE</span>
-                                </a>
-                            </div>
-                        </div>
+            <div class="about-banner reveal">
+                <p class="eyebrow section-tag">About Me</p>
+                <div class="about-grid">
+                    <div class="portrait-card portrait-card-large">
+                        <img src="profile.jpg" alt="Vignesh Vijjapu" class="portrait-image">
                     </div>
 
-                    <!-- Column 2: System Diagnostic Feed & Radar -->
-                    <div class="hud-panel diagnostic-panel" id="diag-card">
-                        <div class="panel-header">
-                            <span class="panel-tag">// SYSTEM_DIAGNOSTICS.EXE</span>
-                            <h3>CORE DIAGNOSTICS</h3>
+                    <div class="about-copy-stack">
+                        <p class="about-copy-lead">
+                            Hello! I'm Vignesh Vijjapu, a Software Engineer fresher with hands-on experience in
+                            ServiceNow, REST APIs, Java, Python, and delivery workflows. I focus on building software
+                            that feels clean, reliable, and easy to use.
+                        </p>
+
+                        <p class="about-copy-body">
+                            I like working on systems where the structure matters as much as the interface. My recent
+                            work includes ServiceNow application development, grid-based exam portal logic, and
+                            deployment pipelines with Docker, Jenkins, and AWS EC2.
+                        </p>
+
+                        <div class="hero-stats about-metrics">
+                            <div class="metric-card">
+                                <span>Projects</span>
+                                <strong>2+</strong>
+                            </div>
+                            <div class="metric-card">
+                                <span>Experience</span>
+                                <strong>2 Internships</strong>
+                            </div>
+                            <div class="metric-card">
+                                <span>Focus</span>
+                                <strong>ServiceNow + Web</strong>
+                            </div>
                         </div>
-                        <div class="panel-body flex-column">
-                            <div class="hud-chart-container">
-                                <!-- Vector SVG Blueprint HUD Circle representing Core Competencies -->
-                                <svg class="hud-radar-svg" viewBox="0 0 200 200">
-                                    <circle cx="100" cy="100" r="90" class="radar-grid-circle" stroke-dasharray="4,4" />
-                                    <circle cx="100" cy="100" r="60" class="radar-grid-circle" />
-                                    <circle cx="100" cy="100" r="30" class="radar-grid-circle" stroke-dasharray="2,2" />
-                                    <line x1="100" y1="10" x2="100" y2="190" class="radar-grid-line" />
-                                    <line x1="10" y1="100" x2="190" y2="100" class="radar-grid-line" />
 
-                                    <!-- Rotating radar sweep beam -->
-                                    <line x1="100" y1="100" x2="100" y2="10" class="radar-sweep" />
-
-                                    <!-- Dynamic points corresponding to Skills/Certifications -->
-                                    <!-- ServiceNow CSA/CAD -->
-                                    <g class="radar-node pulsing" transform="translate(145, 60)">
-                                        <circle r="4" class="node-dot" />
-                                        <text x="8" y="4" class="node-label">SERVICENOW (CSA/CAD)</text>
-                                    </g>
-                                    <!-- Cloud & DevOps -->
-                                    <g class="radar-node pulsing" transform="translate(45, 75)"
-                                        style="animation-delay: 0.8s;">
-                                        <circle r="4" class="node-dot" />
-                                        <text x="-95" y="4" class="node-label">CLOUD & DEVOPS</text>
-                                    </g>
-                                    <!-- Full Stack Java/Python -->
-                                    <g class="radar-node pulsing" transform="translate(100, 160)"
-                                        style="animation-delay: 1.5s;">
-                                        <circle r="4" class="node-dot" />
-                                        <text x="8" y="4" class="node-label">JAVA & PYTHON</text>
-                                    </g>
-                                    <!-- Web REST APIs -->
-                                    <g class="radar-node pulsing" transform="translate(125, 125)"
-                                        style="animation-delay: 2.2s;">
-                                        <circle r="4" class="node-dot" />
-                                        <text x="8" y="4" class="node-label">WEB & REST APIS</text>
-                                    </g>
-                                </svg>
-                            </div>
-
-                            <div class="system-logs-terminal">
-                                <div class="log-title">INTELLIGENCE LOG FEED</div>
-                                <div class="log-lines-container" id="diagnostic-log-feed">
-                                    <div class="log-line"><span class="log-timestamp">[19:48:02]</span> ServiceNow
-                                        Instance: Verified [CSA, CAD Certificate Active]</div>
-                                    <div class="log-line"><span class="log-timestamp">[19:48:15]</span> Mediverse HMS
-                                        Module: Fully Configured</div>
-                                    <div class="log-line"><span class="log-timestamp">[19:48:32]</span> Exam Seating
-                                        Arrangement Engine: Operational</div>
-                                    <div class="log-line"><span class="log-timestamp">[19:48:49]</span> CI/CD Jenkins
-                                        Integration: Pipeline Built & Deployed</div>
-                                    <div class="log-line"><span class="log-timestamp">[19:49:10]</span> Welcome User...
-                                        System Ready.</div>
-                                </div>
-                            </div>
+                        <div class="social-links icon-links">
+                            <a href="https://www.linkedin.com/in/vignesh-vijjapu-b141392b5/" target="_blank" rel="noreferrer">LinkedIn</a>
+                            <a href="https://github.com/vignesh059" target="_blank" rel="noreferrer">GitHub</a>
+                            <a href="mailto:vijjapuvignesh@gmail.com">Email</a>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- SECTION 2: INTERACTIVE CLI TERMINAL -->
-            <section id="terminal-section" class="hud-section">
-                <div class="hud-panel terminal-panel" id="terminal-container">
-                    <div class="panel-header terminal-header">
-                        <div class="terminal-dots">
-                            <span class="term-dot close"></span>
-                            <span class="term-dot minimize"></span>
-                            <span class="term-dot maximize"></span>
+
+        <section id="experience" class="section experience-section">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Experience and education</p>
+                <h2>Professional timeline</h2>
+            </div>
+
+            <div class="experience-grid">
+                <article class="panel timeline-panel reveal">
+                    <h3>Experience</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="timeline-date">May 2025 - Present</span>
+                            <h4>ServiceNow Intern</h4>
+                            <p>Technical Hub</p>
+                            <ul>
+                                <li>Configured ServiceNow ITSM modules and improved service management flow.</li>
+                                <li>Built tables, forms, client scripts, and REST integrations in ServiceNow Studio.</li>
+                            </ul>
                         </div>
-                        <span class="terminal-title">guest@vijjapu-systems: ~ (Interactive CLI Shell)</span>
-                        <span class="terminal-help-hint">Type 'help' for terminal commands</span>
+                        <div class="timeline-item">
+                            <span class="timeline-date">Dec 2023 - Mar 2024</span>
+                            <h4>Software Intern</h4>
+                            <p>Tecnics</p>
+                            <ul>
+                                <li>Developed and tested modules using Java and Python.</li>
+                                <li>Collaborated on debugging, refactoring, and Git-based delivery.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="panel-body terminal-body" id="terminal-body">
-                        <!-- Canvas for Matrix Overlay (Activated on 'hack' command) -->
-                        <canvas id="matrix-canvas"></canvas>
+                </article>
 
-                        <div class="terminal-output" id="terminal-output">
-                            <div class="term-line">VV_SYSTEMS (v1.0.42-BUILD) CLI Shell</div>
-                            <div class="term-line">System operational status: 100%. User class: GUEST.</div>
-                            <div class="term-line">Type <span class="term-cmd">help</span> for a list of available
-                                command strings.</div>
-                            <div class="term-line">&nbsp;</div>
+                <article class="panel timeline-panel reveal">
+                    <h3>Credentials and academics</h3>
+                    <div class="credential-list">
+                        <div class="credential-item">
+                            <strong>ServiceNow CAD</strong>
+                            <span>ServiceNow verified</span>
                         </div>
-                        <div class="terminal-input-container">
-                            <span class="terminal-prompt">guest@vijjapu-systems:~$</span>
-                            <input type="text" id="terminal-input" autocomplete="off" autofocus
-                                aria-label="Terminal Command Input">
+                        <div class="credential-item">
+                            <strong>ServiceNow CSA</strong>
+                            <span>ServiceNow verified</span>
                         </div>
+                        <div class="credential-item">
+                            <strong>Generative AI - Oracle Certified Associate</strong>
+                            <span>Certificate earned</span>
+                        </div>
+                    </div>
+
+                    <div class="education-card">
+                        <span class="eyebrow">Education</span>
+                        <h4>Aditya College of Engineering & Technology</h4>
+                        <p>B.Tech in Computer Science, 2024 - 2027</p>
+                        <div class="education-stats">
+                            <span>CGPA 8.51</span>
+                            <span>77%</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Capabilities</p>
+                <h2>Technical skills, grouped clearly</h2>
+            </div>
+
+            <div class="skills-grid">
+                <article class="panel skill-card reveal">
+                    <h3>ServiceNow</h3>
+                    <div class="chip-group">
+                        <span>CAD</span>
+                        <span>CSA</span>
+                        <span>ITSM Modules</span>
+                        <span>Studio</span>
+                        <span>Business Rules</span>
+                        <span>Client Scripts</span>
+                    </div>
+                </article>
+
+                <article class="panel skill-card reveal">
+                    <h3>Languages</h3>
+                    <div class="chip-group">
+                        <span>Java</span>
+                        <span>Python</span>
+                        <span>C</span>
+                        <span>JavaScript</span>
+                        <span>SQL</span>
+                        <span>HTML5 / CSS3</span>
+                    </div>
+                </article>
+
+                <article class="panel skill-card reveal">
+                    <h3>Cloud and DevOps</h3>
+                    <div class="chip-group">
+                        <span>AWS EC2</span>
+                        <span>Docker</span>
+                        <span>Jenkins</span>
+                        <span>Git</span>
+                        <span>Linux</span>
+                    </div>
+                </article>
+
+                <article class="panel skill-card reveal">
+                    <h3>Web and Core CS</h3>
+                    <div class="chip-group">
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>REST APIs</span>
+                        <span>MongoDB</span>
+                        <span>DBMS</span>
+                        <span>DSA</span>
+                        <span>OOP</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="section-heading section-heading-row reveal">
+                <div>
+                    <p class="eyebrow">Projects</p>
+                    <h2>Selected work</h2>
+                </div>
+                <div class="filter-group" aria-label="Project filters">
+                    <button class="filter-btn active" type="button" data-filter="all">All</button>
+                    <button class="filter-btn" type="button" data-filter="servicenow">ServiceNow</button>
+                    <button class="filter-btn" type="button" data-filter="web">Web</button>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <article class="panel project-card reveal" data-category="servicenow">
+                    <div class="project-topline">
+                        <span>ServiceNow application</span>
+                        <span>2025</span>
+                    </div>
+                    <h3>Mediverse Hospital Management System</h3>
+                    <p>
+                        A hospital management application built on ServiceNow with booking, workflow, and support
+                        modules that reduce manual routing and keep the experience straightforward.
+                    </p>
+                    <div class="chip-group project-tags">
+                        <span>ServiceNow Studio</span>
+                        <span>REST API</span>
+                        <span>Business Rules</span>
+                        <span>ITSM</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="button button-primary open-project-btn" type="button" data-proj="mediverse">View details</button>
+                    </div>
+                </article>
+
+                <article class="panel project-card reveal" data-category="web">
+                    <div class="project-topline">
+                        <span>Full stack and DevOps</span>
+                        <span>2026</span>
+                    </div>
+                    <h3>Exam Portal with Grid Seating</h3>
+                    <p>
+                        A secure exam portal that calculates seating layouts, wraps the app in Docker, and deploys
+                        through Jenkins and AWS for a practical delivery pipeline.
+                    </p>
+                    <div class="chip-group project-tags">
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>Docker</span>
+                        <span>Jenkins</span>
+                        <span>AWS EC2</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="button button-primary open-project-btn" type="button" data-proj="exam">View details</button>
+                        <a class="button button-secondary" href="https://github.com/vignesh059/exam_portal.git" target="_blank" rel="noreferrer">Repository</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+      
+
+        <section id="contact" class="section">
+            <div class="panel contact-panel reveal">
+                <div class="contact-copy">
+                    <p class="eyebrow">Contact</p>
+                    <h2>Let’s build something clean and useful.</h2>
+                    <p>
+                        If you want a developer who can work across ServiceNow, web apps, and delivery workflows,
+                        reach out directly.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <a class="contact-card" href="mailto:vijjapuvignesh@gmail.com">
+                        <span>Email</span>
+                        <strong>vijjapuvignesh@gmail.com</strong>
+                    </a>
+                    <a class="contact-card" href="tel:+916300194981">
+                        <span>Phone</span>
+                        <strong>+91 6300194981</strong>
+                    </a>
+                    <div class="contact-card">
+                        <span>Location</span>
+                        <strong>India</strong>
                     </div>
                 </div>
-            </section>
 
-            <!-- SECTION 3: SKILLS MATRIX -->
-            <section id="skills" class="hud-section">
-                <div class="hud-panel section-panel" id="skills-panel">
-                    <div class="panel-header">
-                        <span class="panel-tag">// CORE_ABILITIES.SYS</span>
-                        <h2>TECHNICAL SKILLS MATRIX</h2>
-                    </div>
-                    <div class="panel-body">
-                        <div class="skills-grid">
-
-                            <!-- Skill Box: ServiceNow -->
-                            <div class="skill-category-card" id="skill-sn">
-                                <div class="skill-card-header">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="3" y="3" width="18" height="18" rx="2" />
-                                        <path d="M21 12H3M12 3v18" />
-                                    </svg>
-                                    <h3>SERVICENOW & TOOLS</h3>
-                                </div>
-                                <div class="skill-card-body">
-                                    <div class="skill-tag-group">
-                                        <span class="skill-badge glow-badge">ServiceNow CAD</span>
-                                        <span class="skill-badge glow-badge">ServiceNow CSA</span>
-                                        <span class="skill-badge">ITSM Modules</span>
-                                        <span class="skill-badge">ServiceNow Studio</span>
-                                        <span class="skill-badge">Business Rules</span>
-                                        <span class="skill-badge">Script Includes</span>
-                                        <span class="skill-badge">Client Scripts</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Skill Box: Languages -->
-                            <div class="skill-category-card" id="skill-lang">
-                                <div class="skill-card-header">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="16 18 22 12 16 6" />
-                                        <polyline points="8 6 2 12 8 18" />
-                                    </svg>
-                                    <h3>LANGUAGES</h3>
-                                </div>
-                                <div class="skill-card-body">
-                                    <div class="skill-tag-group">
-                                        <span class="skill-badge glow-badge">Java</span>
-                                        <span class="skill-badge glow-badge">Python</span>
-                                        <span class="skill-badge">C Language</span>
-                                        <span class="skill-badge">JavaScript (ES6+)</span>
-                                        <span class="skill-badge">SQL</span>
-                                        <span class="skill-badge">HTML5 / CSS3</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Skill Box: Cloud & DevOps -->
-                            <div class="skill-category-card" id="skill-devops">
-                                <div class="skill-card-header">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
-                                    </svg>
-                                    <h3>CLOUD & DEVOPS</h3>
-                                </div>
-                                <div class="skill-card-body">
-                                    <div class="skill-tag-group">
-                                        <span class="skill-badge glow-badge">AWS (EC2)</span>
-                                        <span class="skill-badge glow-badge">Docker</span>
-                                        <span class="skill-badge glow-badge">Jenkins CI/CD</span>
-                                        <span class="skill-badge">Git Version Control</span>
-                                        <span class="skill-badge">Linux OS Shell</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Skill Box: Web Technologies -->
-                            <div class="skill-category-card" id="skill-web">
-                                <div class="skill-card-header">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2">
-                                        <circle cx="12" cy="12" r="10" />
-                                        <path
-                                            d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                                    </svg>
-                                    <h3>WEB TECHNOLOGIES</h3>
-                                </div>
-                                <div class="skill-card-body">
-                                    <div class="skill-tag-group">
-                                        <span class="skill-badge glow-badge">Node.js</span>
-                                        <span class="skill-badge glow-badge">Express.js</span>
-                                        <span class="skill-badge glow-badge">REST APIs</span>
-                                        <span class="skill-badge">MongoDB</span>
-                                        <span class="skill-badge">MySQL</span>
-                                        <!-- <span class="skill-badge">AJAX / Fetch</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Skill Box: Core Subjects -->
-                            <div class="skill-category-card" id="skill-subjects">
-                                <div class="skill-card-header">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5v-15z" />
-                                    </svg>
-                                    <h3>CORE COMPUTER SCIENCE</h3>
-                                </div>
-                                <div class="skill-card-body">
-                                    <div class="skill-tag-group">
-                                        <span class="skill-badge">Data Structures & Algorithms (DSA)</span>
-                                        <span class="skill-badge">Database Management Systems (DBMS)</span>
-                                        <span class="skill-badge">Object-Oriented Programming (OOP)</span>
-                                        <span class="skill-badge">Computer Networks (CN)</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+                <div class="contact-actions">
+                    <a class="button button-primary" href="mailto:vijjapuvignesh@gmail.com">Send email</a>
+                    <a class="button button-secondary" href="#about">Back to top</a>
                 </div>
-            </section>
+            </div>
+        </section>
+    </main>
 
-            <!-- SECTION 4: PROJECT COMMAND GRID -->
-            <section id="projects" class="hud-section">
-                <div class="hud-panel section-panel" id="projects-panel">
-                    <div class="panel-header project-section-header">
-                        <div>
-                            <span class="panel-tag">// MODULE_INDEX.DB</span>
-                            <h2>FUTURISTIC PROJECT DIRECTORY</h2>
-                        </div>
-                        <div class="project-filters">
-                            <button class="filter-btn active" data-filter="all">ALL_SYSTEMS</button>
-                            <button class="filter-btn" data-filter="servicenow">SERVICENOW</button>
-                            <button class="filter-btn" data-filter="web">WEB_JS</button>
-                        </div>
+    <footer class="site-footer">
+        <span class="brand-text">Built by Vignesh</span>
+        <!-- <span>Software Engineer Portfolio</span> -->
+    </footer>
+
+    <div class="modal" id="blueprint-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-dialog">
+            <div class="panel modal-panel">
+                <div class="modal-head">
+                    <div>
+                        <p class="eyebrow" id="modal-project-tag">Project details</p>
+                        <h3 id="modal-project-title">Project title</h3>
                     </div>
-
-                    <div class="panel-body">
-                        <div class="projects-grid">
-
-                            <!-- Project 1: Mediverse -->
-                            <div class="project-hud-card" data-category="servicenow" id="project-mediverse">
-                                <div class="proj-card-border-glow"></div>
-                                <div class="project-tech-blueprint">
-                                    <svg width="100%" height="80" viewBox="0 0 300 80" class="blueprint-svg">
-                                        <rect x="5" y="5" width="290" height="70" class="bp-rect" />
-                                        <circle cx="150" cy="40" r="30" class="bp-circle" />
-                                        <line x1="5" y1="40" x2="295" y2="40" class="bp-line" />
-                                        <text x="15" y="25" class="bp-text">MOD_ID: SN-MED-2025</text>
-                                    </svg>
-                                </div>
-                                <div class="project-content">
-                                    <div class="project-meta">
-                                        <span class="proj-date">AUG 2025</span>
-                                        <span class="proj-category">SERVICENOW APPLICATION</span>
-                                    </div>
-                                    <h3>Mediverse – Hospital Management System</h3>
-                                    <p class="proj-description">
-                                        Designed and developed a full-stack hospital management application on
-                                        ServiceNow. Integrates modules for doctor-patient dashboards, food/room
-                                        bookings, and fully automated ITSM ticket routing, reducing manual efforts by
-                                        40%.
-                                    </p>
-                                    <div class="project-tech-tags">
-                                        <span class="tech-tag">ServiceNow Studio</span>
-                                        <span class="tech-tag">REST API</span>
-                                        <span class="tech-tag">Business Rules</span>
-                                        <span class="tech-tag">ITSM Workflows</span>
-                                    </div>
-                                    <div class="project-actions">
-                                        <button class="btn-primary open-project-btn" data-proj="mediverse">VIEW
-                                            BLUEPRINTS</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Project 2: Exam Portal -->
-                            <div class="project-hud-card" data-category="web" id="project-exam">
-                                <div class="proj-card-border-glow"></div>
-                                <div class="project-tech-blueprint">
-                                    <svg width="100%" height="80" viewBox="0 0 300 80" class="blueprint-svg">
-                                        <rect x="5" y="5" width="290" height="70" class="bp-rect" />
-                                        <line x1="5" y1="10" x2="295" y2="70" class="bp-line" />
-                                        <line x1="5" y1="70" x2="295" y2="10" class="bp-line" />
-                                        <text x="15" y="25" class="bp-text">MOD_ID: JS-EXM-2026</text>
-                                    </svg>
-                                </div>
-                                <div class="project-content">
-                                    <div class="project-meta">
-                                        <span class="proj-date">APR 2026</span>
-                                        <span class="proj-category">FULL STACK & DEVOPS</span>
-                                    </div>
-                                    <h3>Exam Portal with Grid Seating</h3>
-                                    <p class="proj-description">
-                                        A full-featured exam management web app that automatically computes optimized,
-                                        non-adjacent grid seating patterns for branches. Fully containerized and
-                                        deployed on AWS using a Jenkins CI/CD automation pipeline.
-                                    </p>
-                                    <div class="project-tech-tags">
-                                        <span class="tech-tag">Node.js</span>
-                                        <span class="tech-tag">Express</span>
-                                        <span class="tech-tag">Docker</span>
-                                        <span class="tech-tag">Jenkins CI/CD</span>
-                                        <span class="tech-tag">AWS EC2</span>
-                                    </div>
-                                    <div class="project-actions">
-                                        <button class="btn-primary open-project-btn" data-proj="exam">VIEW
-                                            BLUEPRINTS</button>
-                                        <a href="https://github.com/vignesh059/exam_portal.git" target="_blank"
-                                            class="btn-secondary">REPOSITORY</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+                    <button class="icon-button modal-close-btn" id="modal-close" type="button" aria-label="Close dialog">Close</button>
                 </div>
-            </section>
-
-            <!-- SECTION 5: EXPERIENCE & EDUCATION TIMELINE -->
-            <section id="experience" class="hud-section">
-                <div class="grid-layout two-columns">
-
-                    <!-- EXPERIENCE PANEL -->
-                    <div class="hud-panel section-panel" id="exp-timeline-panel">
-                        <div class="panel-header">
-                            <span class="panel-tag">// WORK_GRID.CFG</span>
-                            <h2>EXPERIENCE REGISTRY</h2>
-                        </div>
-                        <div class="panel-body">
-                            <div class="timeline">
-
-                                <!-- Experience Item 1 -->
-                                <div class="timeline-node active" id="exp-1">
-                                    <div class="timeline-marker"></div>
-                                    <div class="timeline-content">
-                                        <div class="timeline-time">MAY 2025 - PRESENT</div>
-                                        <h4>ServiceNow Intern</h4>
-                                        <h5 class="company-text">Technical Hub</h5>
-                                        <ul class="timeline-bullets">
-                                            <li>Configured ServiceNow ITSM modules (Incident, Problem, Change, Service
-                                                Catalog) using Agile workflows, reducing manual ticket resolution effort
-                                                by streamlining service management processes.</li>
-                                            <li>Developed application components in ServiceNow Studio including tables,
-                                                forms, client scripts, and REST API integrations, improving overall
-                                                system functionality.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <!-- Experience Item 2 -->
-                                <div class="timeline-node" id="exp-2">
-                                    <div class="timeline-marker"></div>
-                                    <div class="timeline-content">
-                                        <div class="timeline-time">DEC 2023 - MAR 2024</div>
-                                        <h4>Software Intern</h4>
-                                        <h5 class="company-text">Tecnics</h5>
-                                        <ul class="timeline-bullets">
-                                            <li>Developed and tested software modules using Java and Python, gaining
-                                                hands-on experience with Git version control and Agile development
-                                                practices.</li>
-                                            <li>Collaborated with the team to debug and optimize existing codebases,
-                                                strengthening core OOP and problem-solving skills.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CERTIFICATIONS & EDUCATION PANEL -->
-                    <div class="hud-panel section-panel" id="certifications-panel">
-                        <div class="panel-header">
-                            <span class="panel-tag">// CREDENTIALS.SYS</span>
-                            <h2>CERTIFICATIONS & ACADEMICS</h2>
-                        </div>
-                        <div class="panel-body flex-column gap-lg">
-
-                            <!-- Certifications Sub-panel -->
-                            <div class="credentials-group">
-                                <h3>SYSTEM CREDENTIALS</h3>
-                                <div class="credential-hud-list">
-                                    <div class="credential-item">
-                                        <div class="cred-icon-wrapper">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                                            </svg>
-                                        </div>
-                                        <div class="cred-info">
-                                            <h4>ServiceNow Certified Application Developer (CAD)</h4>
-                                            <span class="cred-issuer">ServiceNow Verified</span>
-                                        </div>
-                                    </div>
-                                    <div class="credential-item">
-                                        <div class="cred-icon-wrapper">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                                            </svg>
-                                        </div>
-                                        <div class="cred-info">
-                                            <h4>ServiceNow Certified System Administrator (CSA)</h4>
-                                            <span class="cred-issuer">ServiceNow Verified</span>
-                                        </div>
-                                    </div>
-                                    <div class="credential-item">
-                                        <div class="cred-icon-wrapper">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <polygon points="12 2 2 7 12 12 22 7 12 2" />
-                                            </svg>
-                                        </div>
-                                        <div class="cred-info">
-                                            <h4>Generative AI – Oracle Certified Associate</h4>
-                                            <a href="#" class="cred-verify-link">VERIFY SECURE LINK</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Education Sub-panel -->
-                            <div class="credentials-group">
-                                <h3>ACADEMIC DATA MATRIX</h3>
-                                <div class="education-card">
-                                    <div class="edu-header">
-                                        <h4>Aditya College of Engineering & Technology</h4>
-                                        <span class="edu-date">2024 - 2027</span>
-                                    </div>
-                                    <p class="edu-degree">Bachelor of Technology (BTech) in Computer Science</p>
-                                    <div class="edu-scores">
-                                        <div class="score-pill">CGPA: <strong>8.51</strong></div>
-                                        <div class="score-pill">Percentage: <strong>77%</strong></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <!-- SECTION 6: FUTURISTIC CONTACT TRANSMITTER -->
-            <section id="contact" class="hud-section">
-                <div class="hud-panel section-panel contact-panel" id="contact-panel">
-                    <div class="panel-header">
-                        <span class="panel-tag">// TRANSMITTER.NET</span>
-                        <h2>ESTABLISH TRANSMISSION LINK</h2>
-                    </div>
-                    <div class="panel-body">
-                        <div class="grid-layout">
-                            <!-- Contact Direct Info -->
-                            <div class="transmitter-diagnostics" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-                                <h3>TRANSMITTER CHANNELS</h3>
-                                <p>Provide telemetry details to establish a secure end-to-end direct communication
-                                    session with Vignesh Vijjapu's console.</p>
-
-                                <div class="comm-channels-hud" style="justify-content: center; width: 100%; max-width: 600px; margin: 2rem auto;">
-                                    <div class="comm-channel" style="align-items: center;">
-                                        <span class="channel-label">EMAIL CHANNEL</span>
-                                        <a href="mailto:vijjapuvignesh@gmail.com"
-                                            class="channel-val text-glowing">vijjapuvignesh@gmail.com</a>
-                                    </div>
-                                    <div class="comm-channel" style="align-items: center;">
-                                        <span class="channel-label">VOICE LINK</span>
-                                        <a href="tel:+916300194981" class="channel-val">+91 6300194981</a>
-                                    </div>
-                                    <div class="comm-channel" style="align-items: center;">
-                                        <span class="channel-label">GEOLOCATION</span>
-                                        <span class="channel-val">East Coast Node [India]</span>
-                                    </div>
-                                </div>
-
-                                <div class="radar-ping-indicator" style="margin-bottom: 2rem;">
-                                    <span class="ping-circle"></span>
-                                    <span class="ping-text">SYSTEM READY FOR TRANSMISSION...</span>
-                                </div>
-
-                                <button onclick="window.location.href='mailto:vijjapuvignesh@gmail.com'" class="btn-primary form-submit-btn" style="display: inline-flex; width: auto; padding: 1rem 2rem; cursor: pointer; border: 1px solid var(--primary-color);">
-                                    <span>INITIATE DIRECT TRANSMISSION</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2">
-                                        <line x1="22" y1="2" x2="11" y2="13" />
-                                        <polygon points="22 2 15 22 11 13 2 9 22 2" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-        <!-- FOOTER HUD -->
-        <footer class="hud-footer">
-            <span class="footer-left">&copy; 2026 VIGNESH. ALL DIAGNOSTICS ACTIVE.</span>
-            <span class="footer-center">HOST_SECURE_CHANNEL // RSA_2048</span>
-            <!-- <span class="footer-right">BUILT BY ANTIGRAVITY</span> -->
-        </footer>
-
-    </div>
-
-    <!-- HOLOGRAPHIC BLUEPRINT MODAL FOR PROJECTS -->
-    <div class="hologram-modal" id="blueprint-modal">
-        <div class="modal-content-wrapper">
-            <div class="hud-panel modal-panel">
-                <div class="panel-header">
-                    <span class="panel-tag" id="modal-project-tag">// BLUEPRINT_DATA.SYS</span>
-                    <h3 id="modal-project-title">PROJECT_TITLE</h3>
-                    <button class="modal-close-btn" id="modal-close"
-                        aria-label="Close Project Blueprint">&times;</button>
-                </div>
-                <div class="panel-body" id="modal-body-content">
-                    <!-- Loaded dynamically via JavaScript -->
-                </div>
+                <div id="modal-body-content" class="modal-body"></div>
             </div>
         </div>
     </div>
 
-    <!-- JavaScript Link -->
     <script src="script.js"></script>
 </body>
 
